@@ -1,0 +1,44 @@
+body {
+}
+h1 {
+  text-align: center;
+}
+ul {
+  margin: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 80;
+  line-height: 16px;
+  font-family: arial, sans-serif;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 80;
+  line-height: 16px;
+}
+small {
+  font-family: "Architects Daughter", cursive;
+}
+form {
+  margin: 0 auto;
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  font: 1rem "Fira Sans", sans-serif;
+}
+.weather-body {
+  max-width: 600px;
+  color: #f4f6ff;
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  margin: 50px auto;
+  padding: 5px 25px 5px 0px;
+  border-radius: 3px;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+.weather-top {
+  line-height: 20px;
+  font-size: 10px;
+}

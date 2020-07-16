@@ -4,8 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paw-Weather</title>
-    <link ref="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/6072711dbd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="weather-body">
+      <form id="search-box">
+        <input
+          type="City"
+          placeholder="Type in your City...."
+          id="search-text-input"
+        />
+        <input type="submit" value="search" id="search-button" />
+        <a href="javascript:void(0)" id="current-location">
+          <i class="fas fa-map-marker-alt"> </i>
+        </a>
+      </form>
+      <h1>
+        Calgary
+      </h1>
+      <div class="weather-top">
+        <div class="row">
+          <div class="col-sm-6">
+            <ul>
+              <li>
+                Thu 16th, July, 2020, 10:12 am
+              </li>
+              <li>
+                Sunny
+              </li>
+              <li>
+                Wind = 2Km/H
+              </li>
+              <li>
+                Percipiration = 70%
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6" id="degrees">
+            <h2>☀️ add image 19 <small>°C | °F</small></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4"></div>
+        </div>
+        <div class="col-sm-8"></div>
+
+        <div class="weather-bottom"></div>
+      </div>
+    </div>
+    <small>
+      <a href="#" target="_blank">Open-source code</a>
+      by Nimi Dada
+    </small>
+  </body>
   <script src="src/index.js"></script>
 </html>
