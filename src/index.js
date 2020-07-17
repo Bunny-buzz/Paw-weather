@@ -21,3 +21,10 @@ let days = [
 ];
 let day = days[now.getDay()];
 timepiece.innerHTML = `${day} ${date}, ${hours}: ${minutes}`;
+
+let 
+function search(city) {
+    let apiKey = "d431d2ed9ff419b2288a607b5abcf652";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(showPosition);
+}
