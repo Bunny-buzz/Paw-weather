@@ -18,55 +18,73 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="weather-body">
-      <form id="search-box">
-        <input
-          type="City"
-          placeholder="Type in your City...."
-          id="search-text-input"
-        />
-        <input type="submit" value="search" id="search-button" />
-        <a href="javascript:void(0)" id="current-location">
-          <i class="fas fa-map-marker-alt"> </i>
-        </a>
-      </form>
-      <h1>
-        Calgary
-      </h1>
-      <div class="weather-top">
-        <div class="row">
-          <div class="col-sm-6">
-            <ul>
-              <li>
-                Thu 16th, July, 2020, 10:12 am
-              </li>
-              <li>
-                Sunny
-              </li>
-              <li>
-                Wind = 2Km/H
-              </li>
-              <li>
-                Percipiration = 70%
-              </li>
-            </ul>
+    <div class="container">
+      <div class="weather-body">
+        <form id="search-box">
+          <input
+            type="City"
+            placeholder="Type in your City...."
+            id="search-text-input"
+          />
+          <input type="submit" value="search" id="search-button" />
+          <a href="javascript:void(0)" id="current-location">
+            <i class="fas fa-map-marker-alt"> </i>
+          </a>
+        </form>
+        <h1>
+          Calgary
+        </h1>
+        <div class="weather-top">
+          <div class="row">
+            <div class="col-sm-6">
+              <ul>
+                <li id="timepiece">
+                  Thu 16th, July, 2020, 10:12 am
+                </li>
+                <li>
+                  Sunny
+                </li>
+                <li>
+                  Wind = 2Km/H
+                </li>
+                <li>
+                  Percipiration = 70%
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-6" id="degrees">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"
+                    ><a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-6" id="degrees">
-            <h2>☀️ add image 19 <small>°C | °F</small></h2>
+          <div class="row">
+            <div class="col-sm-4"></div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4"></div>
-        </div>
-        <div class="col-sm-8"></div>
+          <div class="col-sm-8"></div>
 
-        <div class="weather-bottom"></div>
+          <div class="weather-bottom">
+            Got to be
+          </div>
+        </div>
+        <small class="checker">
+          <a href="https://weather.com/en-CA/weather/today/l/CAON4756:1:CA">
+            Weather Checker</a
+          >
+        </small>
       </div>
+      <small>
+        <a href="#" target="_blank">Open-source code</a>
+        by Nimi Dada
+      </small>
     </div>
-    <small>
-      <a href="#" target="_blank">Open-source code</a>
-      by Nimi Dada
-    </small>
   </body>
   <script src="src/index.js"></script>
 </html>

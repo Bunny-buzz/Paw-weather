@@ -1,7 +1,6 @@
-body {
-}
 h1 {
   text-align: center;
+  margin-bottom: 0;
 }
 ul {
   margin: 0;
@@ -10,9 +9,9 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 20px;
-  font-weight: 80;
-  line-height: 16px;
+  font-size: 10px;
+  font-weight: 8;
+  line-height: px;
   font-family: arial, sans-serif;
 }
 h2 {
@@ -22,6 +21,7 @@ h2 {
 }
 small {
   font-family: "Architects Daughter", cursive;
+  margin-top: 0;
 }
 form {
   margin: 0 auto;
@@ -30,7 +30,6 @@ form {
   font: 1rem "Fira Sans", sans-serif;
 }
 .weather-body {
-  max-width: 600px;
   color: #f4f6ff;
   background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
   margin: 50px auto;
@@ -41,4 +40,7 @@ form {
 .weather-top {
   line-height: 20px;
   font-size: 10px;
+}
+.container {
+  max-width: 600px;
 }
