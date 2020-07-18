@@ -1,7 +1,8 @@
-h1 {
-  text-align: center;
-  margin-bottom: 0;
+.container {
+  font-family: "Old Standard TT", serif;
+  max-width: 600px;
 }
+
 ul {
   margin: 0;
 }
@@ -9,16 +10,18 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 10px;
-  font-weight: 8;
   text-transform: capitalize;
-  line-height: px;
-  font-family: arial, sans-serif;
+  line-height: 16px;
+  margin-top: 5px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 0;
 }
 h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 80;
-  line-height: 16px;
+  line-height: 15px;
 }
 small {
   font-family: "Architects Daughter", cursive;
@@ -28,10 +31,15 @@ form {
   margin: 0 auto;
   padding: 10px 0px 10px 0px;
   text-align: center;
-  font: 1rem "Fira Sans", sans-serif;
+  font-family: "Architects Daughter", cursive;
+}
+
+.button {
+  font-size: 10px;
 }
 .weather-body {
   color: #f4f6ff;
+  line-height: 20px;
   background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
   margin: 50px auto;
   padding: 5px 25px 5px 0px;
@@ -42,11 +50,28 @@ form {
   line-height: 20px;
   font-size: 10px;
 }
-.container {
-  max-width: 600px;
+.weather-temperature strong {
+  font-size: 64px;
+  line-height: 50px;
+  font-weight: 20px;
+}
+.weather-temperatur img {
+  line-height: 30px;
+}
+
+.weather-temperature .units {
+  position: relative;
+  left: 20px;
+  font-size: 16px;
+  top: -70px;
 }
 .weather-bottom {
-  margin-top: 10px;
+  margin: 20px auto;
+  line-height: 20px;
+  font-size: 10px;
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  color: #f4f6ff;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
 }
 
 .weather-bottom h4 {
@@ -55,23 +80,28 @@ form {
   font-weight: 400;
   text-align: center;
   height: 15px;
-  line-height: 15px;
   padding-top: 7px;
 }
 
 .weather-bottom img {
   display: block;
   margin: 0 auto;
-  height: 48px;
-  width: 48px;
+  height: 36px;
+  width: 30px;
 }
 
 .weather-bottom-temperature {
   text-align: center;
   color: #f4f6ff;
   font-size: 13px;
-  font-weight: 400;
-  height: auto;
   line-height: 15px;
-  white-space: nowrap;
+}
+.checker {
+  position: relative;
+  left: 215px;
+  text-align: center;
+}
+.source {
+  position: relative;
+  top: 0px;
 }

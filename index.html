@@ -10,6 +10,10 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <script
       src="https://kit.fontawesome.com/6072711dbd.js"
@@ -19,55 +23,65 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-body">
-        <form id="search-box">
-          <input
-            type="City"
-            placeholder="Type in your City...."
-            id="search-text-input"
-          />
-          <input type="submit" value="search" id="search-button" />
-          <a href="javascript:void(0)" id="current-location">
-            <i class="fas fa-map-marker-alt"> </i>
-          </a>
-        </form>
-        <h1 id="city"></h1>
-        <div class="weather-top">
-          <div class="row">
-            <div class="col-sm-6">
-              <ul>
-                <li id="timepiece"></li>
-                <li id="description"></li>
-                <li>Wind = <span id="wind"></span>Km/h</li>
-                <li>Humidity = <span id="humidity"></span>%</li>
-              </ul>
-            </div>
-            <div class="col-sm-6" id="degrees">
-              <div class="clearfix weather-temperature">
-                <img src="" alt="Clear" id="image" class="float-left" />
-                <div class="float-left">
-                  <strong id="temperature"></strong
-                  ><span class="units">°C </span>
+      <div class="app">
+        <div class="weather-body">
+          <form id="search-box">
+            <input
+              type="City"
+              placeholder="Type in your City...."
+              id="search-text-input"
+            />
+            <input type="submit" value="Search" id="search-button" />
+            <a href="javascript:void(0)" id="current-location">
+              <i class="fas fa-map-marker-alt"> </i>
+            </a>
+          </form>
+          <h1 id="city"></h1>
+          <div class="weather-top">
+            <div class="row">
+              <div class="col-sm-6">
+                <h2>
+                  <ul>
+                    <li id="timepiece"></li>
+                    <li id="description"></li>
+                    <li>Wind: <span id="wind"></span>Km/h</li>
+                    <li>Humidity: <span id="humidity"></span>%</li>
+                  </ul>
+                </h2>
+              </div>
+              <div class="col-sm-6" id="degrees">
+                <div class="clearfix weather-temperature">
+                  <img src="" alt="Clear" id="image" class="float-left" />
+                  <div class="float-left">
+                    <h3>
+                      <strong class="weather-figure" id="temperature"></strong>
+                    </h3>
+                    <div class="units">
+                      <span class="float-right">°C</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-sm-4"></div>
+            </div>
+            <div class="col-sm-8"></div>
+            <div class="row weather-bottom" id="forecast"></div>
           </div>
-          <div class="row">
-            <div class="col-sm-4"></div>
-          </div>
-          <div class="col-sm-8"></div>
-          <div class="row weather-bottom" id="forecast"></div>
+          <small class="checker">
+            <a href="https://weather.com/en-CA/weather/today/l/CAON4756:1:CA">
+              Weather Checker</a
+            >
+          </small>
         </div>
-        <small class="checker">
-          <a href="https://weather.com/en-CA/weather/today/l/CAON4756:1:CA">
-            Weather Checker</a
+        <small class="source">
+          <a href="https://github.com/Bunny-buzz/Paw-weather" target="_blank"
+            >Open-source code</a
           >
+          by Nimi Dada
         </small>
       </div>
-      <small>
-        <a href="#" target="_blank">Open-source code</a>
-        by Nimi Dada
-      </small>
     </div>
   </body>
   <script src="src/index.js"></script>
