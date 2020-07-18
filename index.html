@@ -31,36 +31,23 @@
             <i class="fas fa-map-marker-alt"> </i>
           </a>
         </form>
-        <h1>
-          Calgary
-        </h1>
+        <h1 id="city"></h1>
         <div class="weather-top">
           <div class="row">
             <div class="col-sm-6">
               <ul>
-                <li id="timepiece">
-                  Thu 16th, July, 2020, 10:12 am
-                </li>
-                <li>
-                  Sunny
-                </li>
-                <li>
-                  Wind = 2Km/H
-                </li>
-                <li>
-                  Percipiration = 70%
-                </li>
+                <li id="timepiece"></li>
+                <li id="description"></li>
+                <li>Wind = <span id="wind"></span>Km/h</li>
+                <li>Humidity = <span id="humidity"></span>%</li>
               </ul>
             </div>
             <div class="col-sm-6" id="degrees">
               <div class="clearfix weather-temperature">
-                <img src="" alt="Clear" id="icon" class="float-left" />
+                <img src="" alt="Clear" id="image" class="float-left" />
                 <div class="float-left">
                   <strong id="temperature"></strong
-                  ><span class="units"
-                    ><a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a></span
-                  >
+                  ><span class="units">°C </span>
                 </div>
               </div>
             </div>
@@ -69,10 +56,7 @@
             <div class="col-sm-4"></div>
           </div>
           <div class="col-sm-8"></div>
-
-          <div class="weather-bottom">
-            Got to be
-          </div>
+          <div class="row weather-bottom" id="forecast"></div>
         </div>
         <small class="checker">
           <a href="https://weather.com/en-CA/weather/today/l/CAON4756:1:CA">
