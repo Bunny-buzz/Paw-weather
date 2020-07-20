@@ -96,4 +96,19 @@ function submitSearch(event) {
 let form = document.querySelector("#search-box");
 form.addEventListener("submit", submitSearch);
 
+function showWeather(response) {
+  let currentLocationElement = document.querySelector("#current-location");
+  currentLocationElement.innerHTML = Math.round(response.data.main.temp);
+}
+
+function retrievePosition(position) {
+  let apiKey = "d431d2ed9ff419b2288a607b5abcf652";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  axios.get(url).then(showWeather);
+}
+
+navigator.geolocation.getCurrentPosition(retrievePosition);
+
 search("Calgary");
