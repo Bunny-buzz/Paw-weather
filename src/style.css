@@ -55,13 +55,13 @@ form {
   line-height: 50px;
   font-weight: 20px;
 }
-.weather-temperatur img {
+.weather-temperature img {
   line-height: 30px;
 }
 
 .weather-temperature .units {
   position: relative;
-  left: 20px;
+  left: 50px;
   font-size: 16px;
   top: -70px;
 }
@@ -90,6 +90,13 @@ form {
   width: 30px;
 }
 
+.units .active {
+  color: #f4f6ff;
+  cursor: default;
+}
+.units .active:hover {
+  text-decoration: none;
+}
 .weather-bottom-temperature {
   text-align: center;
   color: #f4f6ff;

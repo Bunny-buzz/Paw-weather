@@ -39,13 +39,18 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
+  let feelsElement = document.querySelector("#feels");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let timepieceElement = document.querySelector("#timepiece");
   let imageElement = document.querySelector("#image");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+
+  celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
+  feelsElement.innerHTML = Math.round(response.data.main.feels_like);
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   timepieceElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -91,10 +96,7 @@ function submitSearch(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#search-text-input");
   search(cityInputElement.value);
-  console.log(cityInputElement.value);
 }
-let form = document.querySelector("#search-box");
-form.addEventListener("submit", submitSearch);
 
 function showWeather(response) {
   let currentLocationElement = document.querySelector("#current-location");
@@ -110,5 +112,36 @@ function retrievePosition(position) {
 }
 
 navigator.geolocation.getCurrentPosition(retrievePosition);
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
+  let FahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(FahrenheitTemperature);
+}
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let form = document.querySelector("#search-box");
+form.addEventListener("submit", submitSearch);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("#click", displayFahrenheitTemperature);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("#click", displayCelsiusTemperature);
 
 search("Fort Mcmurray");
