@@ -117,8 +117,8 @@ function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
 
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
 
   let FahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(FahrenheitTemperature);
@@ -126,8 +126,8 @@ function displayFahrenheitTemperature(event) {
 function displayCelsiusTemperature(event) {
   event.preventDefault();
 
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
 
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
@@ -139,9 +139,9 @@ let form = document.querySelector("#search-box");
 form.addEventListener("submit", submitSearch);
 
 let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("#click", displayFahrenheitTemperature);
+fahrenheit.addEventListener("click", displayFahrenheitTemperature);
 
 let celsius = document.querySelector("#celsius");
-celsius.addEventListener("#click", displayCelsiusTemperature);
+celsius.addEventListener("click", displayCelsiusTemperature);
 
 search("Fort Mcmurray");
